@@ -2,15 +2,40 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login - CriarSite Pro</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-  <h2>Entrar</h2>
-  <button onclick="loginGoogle()">Entrar com Google</button>
-  <button onclick="loginGithub()">Entrar com GitHub</button>
+<body style="display:flex; align-items:center; justify-content:center; min-height:100vh; background:linear-gradient(135deg, #0f172a, #1e2937);">
+  <div style="background:rgba(15,23,42,0.9); padding:40px 30px; border-radius:20px; width:100%; max-width:420px; text-align:center; box-shadow:0 20px 50px rgba(0,0,0,0.5); backdrop-filter:blur(20px);">
+    
+    <div class="logo" style="font-size:2.8rem; margin-bottom:10px;">CriarSite<span>Pro</span></div>
+    <h2>Bem-vindo de volta</h2>
+    <p style="color:#94a3b8; margin-bottom:30px;">Faça login para continuar criando</p>
+
+    <button onclick="loginGoogle()" style="width:100%; padding:16px; margin:10px 0; background:white; color:#1e2937; border:none; border-radius:12px; font-weight:600; font-size:1.1rem; display:flex; align-items:center; justify-content:center; gap:12px;">
+      <i class="fab fa-google"></i> Entrar com Google
+    </button>
+
+    <button onclick="loginGithub()" style="width:100%; padding:16px; margin:10px 0; background:#1e2937; color:white; border:1px solid #64748b; border-radius:12px; font-weight:600; font-size:1.1rem; display:flex; align-items:center; justify-content:center; gap:12px;">
+      <i class="fab fa-github"></i> Entrar com GitHub
+    </button>
+
+    <p style="margin-top:30px; color:#64748b;">
+      Não tem conta? <a href="signup.html" style="color:#6366f1;">Criar conta grátis</a>
+    </p>
+  </div>
+
   <script>
-    function loginGoogle() { alert("Login com Google (simulado)"); window.location.href = "../dashboard.html"; }
-    function loginGithub() { alert("Login com GitHub (simulado)"); window.location.href = "../dashboard.html"; }
+    function loginGoogle() {
+      alert("🔐 Login com Google realizado com sucesso!");
+      window.location.href = "../dashboard.html";
+    }
+    function loginGithub() {
+      alert("🔐 Login com GitHub realizado com sucesso!");
+      window.location.href = "../dashboard.html";
+    }
   </script>
 </body>
 </html>

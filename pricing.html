@@ -3,45 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Preços - CriarSite Pro</title>
+  <title>Planos - CriarSite Pro</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body style="padding-top: 100px; text-align:center;">
-  <h1 style="font-size: 3rem;">Escolha o plano ideal</h1>
-  <p style="font-size:1.3rem; color:#94a3b8; max-width:600px; margin:20px auto;">Sem taxas escondidas. Cancele quando quiser.</p>
+<body style="padding-top:100px; text-align:center;">
+  <h1 style="font-size:3.2rem;">Escolha seu plano</h1>
+  <p style="max-width:600px; margin:20px auto; color:#94a3b8;">Cancele a qualquer momento. Sem contratos longos.</p>
 
-  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:60px;">
-    
-    <!-- Plano Free -->
-    <div style="background:#1e2937; width:320px; border-radius:20px; padding:40px 30px; border:2px solid #334155;">
+  <div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap; margin-top:60px;">
+
+    <!-- Free -->
+    <div style="background:#1e2937; width:340px; border-radius:20px; padding:40px 30px;">
       <h2>Free</h2>
-      <h1 style="font-size:3rem; margin:20px 0;">R$ 0</h1>
-      <ul style="text-align:left; line-height:2.2;">
+      <h1 style="font-size:3.5rem;">R$ 0</h1>
+      <ul style="text-align:left; margin:30px 0; line-height:2.4;">
         <li>✅ 1 Site</li>
         <li>✅ Editor básico</li>
         <li>❌ Domínio próprio</li>
+        <li>❌ IA ilimitada</li>
       </ul>
-      <button onclick="subscribe('free')" style="width:100%; margin-top:30px; padding:16px; border-radius:12px; background:#334155;">Começar Grátis</button>
+      <button onclick="subscribe('free')" class="btn-primary" style="width:100%;">Começar Grátis</button>
     </div>
 
-    <!-- Plano Pro (Recomendado) -->
-    <div style="background: linear-gradient(135deg, #1e2937, #312e81); width:340px; border-radius:20px; padding:40px 30px; border:3px solid #6366f1; transform:scale(1.08); box-shadow:0 20px 40px rgba(99,102,241,0.3);">
-      <h2 style="color:#c4d0ff;">PRO <span style="font-size:0.9rem; background:#6366f1; padding:4px 12px; border-radius:20px;">Popular</span></h2>
-      <h1 style="font-size:3.2rem; margin:20px 0;">R$ 49<span style="font-size:1rem;">/mês</span></h1>
-      <ul style="text-align:left; line-height:2.4;">
-        <li>✅ Sites Ilimitados</li>
+    <!-- Pro -->
+    <div style="background:linear-gradient(135deg, #1e2937, #312e81); width:360px; border-radius:20px; padding:40px 30px; border:4px solid #6366f1; transform:scale(1.07); box-shadow:0 25px 60px rgba(99,102,241,0.4);">
+      <span style="background:#6366f1; padding:6px 20px; border-radius:30px; font-size:0.9rem;">MAIS POPULAR</span>
+      <h2 style="margin:20px 0;">Pro</h2>
+      <h1 style="font-size:3.8rem;">R$ 49<span style="font-size:1.2rem;">/mês</span></h1>
+      <ul style="text-align:left; margin:30px 0; line-height:2.6;">
+        <li>✅ Sites ilimitados</li>
         <li>✅ IA Avançada</li>
-        <li>✅ Domínio Próprio</li>
-        <li>✅ Hospedagem Rápida</li>
-        <li>✅ Suporte Prioritário</li>
+        <li>✅ Domínio próprio</li>
+        <li>✅ Hospedagem premium</li>
+        <li>✅ Suporte prioritário</li>
       </ul>
-      <button onclick="subscribe('pro')" style="width:100%; margin-top:40px; padding:18px; border-radius:12px; background:white; color:#1e2937; font-weight:bold;">Assinar Pro</button>
+      <button onclick="subscribe('pro')" class="btn-primary" style="width:100%; background:white; color:#1e2937; font-weight:bold; padding:18px;">Assinar Pro</button>
     </div>
   </div>
 
   <script>
     function subscribe(plan) {
-      alert(`🔄 Redirecionando para pagamento do plano ${plan.toUpperCase()}...`);
+      alert(`🔄 Redirecionando para pagamento do plano ${plan.toUpperCase()}... (Stripe simulado)`);
     }
   </script>
 </body>

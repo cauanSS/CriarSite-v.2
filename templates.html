@@ -1,1 +1,54 @@
- 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates - CriarSite Pro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">CriarSite<span>Pro</span></div>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="pricing.html">Planos</a>
+      <a href="editor.html">Editor</a>
+    </div>
+    <button onclick="window.location.href='index.html'" class="back-btn">← Voltar</button>
+  </nav>
+
+  <div style="padding: 100px 6% 40px; text-align:center;">
+    <h1 style="font-size: 3rem;">Escolha um Template</h1>
+    <p style="font-size:1.3rem; color:#94a3b8; max-width:700px; margin:20px auto;">Comece rápido com templates profissionais otimizados por IA</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 50px;">
+      
+      <div class="template-card" onclick="useTemplate('portfolio')">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Portfolio" style="width:100%; border-radius:12px;">
+        <h3>Portfólio Moderno</h3>
+        <p>Para fotógrafos, designers e criadores</p>
+      </div>
+
+      <div class="template-card" onclick="useTemplate('restaurante')">
+        <img src="https://picsum.photos/id/201/600/400" alt="Restaurante" style="width:100%; border-radius:12px;">
+        <h3>Restaurante / Delivery</h3>
+        <p>Cardápio, reservas e contato</p>
+      </div>
+
+      <div class="template-card" onclick="useTemplate('empresa')">
+        <img src="https://picsum.photos/id/251/600/400" alt="Empresa" style="width:100%; border-radius:12px;">
+        <h3>Empresa / SaaS</h3>
+        <p>Profissional e conversor</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function useTemplate(type) {
+      alert(`✅ Template "${type}" carregado! Redirecionando para o editor...`);
+      window.location.href = 'editor.html';
+    }
+  </script>
+</body>
+</html>

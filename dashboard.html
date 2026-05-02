@@ -11,37 +11,22 @@
   <nav class="navbar">
     <div class="logo">CriarSite<span>Pro</span></div>
     <div class="nav-links">
-      <a href="editor.html">+ Novo Site</a>
       <a href="templates.html">Templates</a>
       <a href="pricing.html">Planos</a>
+      <a href="editor.html">+ Novo Site</a>
     </div>
-    <div style="display:flex; align-items:center; gap:15px;">
-      <span>Bem-vindo, Usuário</span>
-      <button onclick="location.href='index.html'" class="btn-primary">Sair</button>
-    </div>
+    <button onclick="window.location.href='index.html'" class="btn-primary">Sair</button>
   </nav>
 
   <div style="padding: 100px 6% 40px;">
-    <h1 style="font-size: 2.8rem; margin-bottom: 10px;">Meu Dashboard</h1>
-    <p style="color:#94a3b8;">Gerencie todos os seus sites profissionais</p>
+    <h1>Meus Sites</h1>
+    <p style="color:#94a3b8;">Gerencie todos os seus projetos</p>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 25px; margin-top: 40px;">
-      
-      <!-- Card de Site -->
-      <div style="background: rgba(30,41,59,0.6); border-radius: 16px; padding: 25px; border: 1px solid rgba(99,102,241,0.2); transition: 0.4s;">
-        <h3>Meu Site Principal</h3>
-        <p style="color:#64748b; margin: 8px 0;">https://meusite.criarsite.pro</p>
-        <button onclick="location.href='editor.html'" style="width:100%; padding:14px; background:#6366f1; border:none; border-radius:8px; color:white; margin-top:15px;">
-          Editar Site
-        </button>
-      </div>
-
-      <div style="background: rgba(30,41,59,0.6); border-radius: 16px; padding: 25px; border: 1px solid rgba(99,102,241,0.2);">
-        <h3>Site de Portfólio</h3>
-        <p style="color:#64748b; margin: 8px 0;">Publicado • 3 dias atrás</p>
-        <button onclick="alert('Abrindo editor...')" style="width:100%; padding:14px; background:#1e2937; border:none; border-radius:8px; color:white; margin-top:15px;">
-          Editar
-        </button>
+    <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap:25px; margin-top:40px;">
+      <div class="project-card">
+        <h3>Site Principal</h3>
+        <p>https://meusite.criarsite.pro</p>
+        <button onclick="window.location.href='editor.html'" class="btn-primary">Editar</button>
       </div>
     </div>
   </div>
