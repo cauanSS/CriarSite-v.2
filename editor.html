@@ -3,37 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor - CriarSite Pro</title>
+  <title>Editor Profissional - CriarSite Pro</title>
   <link rel="stylesheet" href="assets/css/editor.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Toolbar Superior -->
   <div class="toolbar">
-    <div class="logo">CriarSite Pro</div>
-    <button onclick="generateWithAI()" class="ai-btn"><i class="fas fa-magic"></i> Gerar com IA</button>
-    <button onclick="saveSite()">Salvar Site</button>
-    <button onclick="publishSite()">Publicar</button>
+    <div class="logo">CriarSite<span>Pro</span></div>
+    
+    <div class="toolbar-center">
+      <button onclick="undo()"><i class="fas fa-undo"></i></button>
+      <button onclick="redo()"><i class="fas fa-redo"></i></button>
+      <button onclick="generateWithAI()" class="ai-btn">
+        <i class="fas fa-magic"></i> Gerar com IA
+      </button>
+    </div>
+
+    <div class="toolbar-right">
+      <button onclick="saveSite()" class="save-btn">Salvar</button>
+      <button onclick="publishSite()" class="publish-btn">Publicar Site</button>
+    </div>
   </div>
 
   <div class="main-container">
-    <!-- Sidebar de Blocos -->
+    <!-- Sidebar - Blocos -->
     <div class="sidebar">
-      <h3>Blocos</h3>
+      <h3><i class="fas fa-cubes"></i> Blocos</h3>
       <div class="block" draggable="true" data-type="header">Cabeçalho</div>
       <div class="block" draggable="true" data-type="hero">Hero Section</div>
       <div class="block" draggable="true" data-type="features">Funcionalidades</div>
-      <div class="block" draggable="true" data-type="about">Sobre</div>
+      <div class="block" draggable="true" data-type="gallery">Galeria</div>
+      <div class="block" draggable="true" data-type="testimonials">Depoimentos</div>
       <div class="block" draggable="true" data-type="contact">Contato</div>
       <div class="block" draggable="true" data-type="footer">Rodapé</div>
     </div>
 
-    <!-- Canvas do Editor -->
-    <div id="canvas" class="canvas"></div>
+    <!-- Área de Edição (Canvas) -->
+    <div id="canvas" class="canvas">
+      <div class="empty-state">
+        <h2>Arraste os blocos para cá</h2>
+        <p>Ou clique em "Gerar com IA" para começar rápido</p>
+      </div>
+    </div>
 
     <!-- Painel de Propriedades -->
-    <div class="properties">
+    <div class="properties-panel">
       <h3>Propriedades</h3>
-      <p>Selecione um elemento</p>
+      <div id="properties-content">
+        <p>Selecione um elemento no canvas para editar</p>
+      </div>
     </div>
   </div>
 

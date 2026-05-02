@@ -2,31 +2,46 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Preços - CriarSite Pro</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
-  <h1>Escolha seu Plano</h1>
-  <div class="plans">
-    <div class="plan">
+<body style="padding-top: 100px; text-align:center;">
+  <h1 style="font-size: 3rem;">Escolha o plano ideal</h1>
+  <p style="font-size:1.3rem; color:#94a3b8; max-width:600px; margin:20px auto;">Sem taxas escondidas. Cancele quando quiser.</p>
+
+  <div style="display:flex; justify-content:center; gap:30px; flex-wrap:wrap; margin-top:60px;">
+    
+    <!-- Plano Free -->
+    <div style="background:#1e2937; width:320px; border-radius:20px; padding:40px 30px; border:2px solid #334155;">
       <h2>Free</h2>
-      <p>R$ 0/mês</p>
-      <button onclick="subscribe('free')">Começar Grátis</button>
-    </div>
-    <div class="plan popular">
-      <h2>Pro</h2>
-      <p>R$ 49/mês</p>
-      <ul>
-        <li>IA Ilimitada</li>
-        <li>Domínio Próprio</li>
-        <li>Suporte Prioritário</li>
+      <h1 style="font-size:3rem; margin:20px 0;">R$ 0</h1>
+      <ul style="text-align:left; line-height:2.2;">
+        <li>✅ 1 Site</li>
+        <li>✅ Editor básico</li>
+        <li>❌ Domínio próprio</li>
       </ul>
-      <button onclick="subscribe('pro')">Assinar Pro</button>
+      <button onclick="subscribe('free')" style="width:100%; margin-top:30px; padding:16px; border-radius:12px; background:#334155;">Começar Grátis</button>
+    </div>
+
+    <!-- Plano Pro (Recomendado) -->
+    <div style="background: linear-gradient(135deg, #1e2937, #312e81); width:340px; border-radius:20px; padding:40px 30px; border:3px solid #6366f1; transform:scale(1.08); box-shadow:0 20px 40px rgba(99,102,241,0.3);">
+      <h2 style="color:#c4d0ff;">PRO <span style="font-size:0.9rem; background:#6366f1; padding:4px 12px; border-radius:20px;">Popular</span></h2>
+      <h1 style="font-size:3.2rem; margin:20px 0;">R$ 49<span style="font-size:1rem;">/mês</span></h1>
+      <ul style="text-align:left; line-height:2.4;">
+        <li>✅ Sites Ilimitados</li>
+        <li>✅ IA Avançada</li>
+        <li>✅ Domínio Próprio</li>
+        <li>✅ Hospedagem Rápida</li>
+        <li>✅ Suporte Prioritário</li>
+      </ul>
+      <button onclick="subscribe('pro')" style="width:100%; margin-top:40px; padding:18px; border-radius:12px; background:white; color:#1e2937; font-weight:bold;">Assinar Pro</button>
     </div>
   </div>
+
   <script>
     function subscribe(plan) {
-      alert(`Redirecionando para pagamento - Plano ${plan.toUpperCase()}`);
+      alert(`🔄 Redirecionando para pagamento do plano ${plan.toUpperCase()}...`);
     }
   </script>
 </body>
