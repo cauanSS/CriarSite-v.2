@@ -1,0 +1,4 @@
+echo
+git add .
+git commit -m "Atualização do projeto"
+git push
