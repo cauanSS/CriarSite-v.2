@@ -1,1 +1,20 @@
- 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', sans-serif; }
+
+.navbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 5%; background: #1e2937; color: white;
+}
+.logo { font-size: 1.8rem; font-weight: bold; }
+.logo span { color: #6366f1; }
+
+.btn-primary, .btn-hero {
+  background: #6366f1; color: white; border: none;
+  padding: 12px 24px; border-radius: 8px; cursor: pointer;
+}
+.btn-hero { font-size: 1.2rem; padding: 16px 32px; }
+
+.hero {
+  text-align: center; padding: 120px 20px; background: linear-gradient(135deg, #1e2937, #312e81);
+  color: white;
+}

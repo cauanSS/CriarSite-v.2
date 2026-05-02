@@ -1,1 +1,33 @@
- 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Preços - CriarSite Pro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <h1>Escolha seu Plano</h1>
+  <div class="plans">
+    <div class="plan">
+      <h2>Free</h2>
+      <p>R$ 0/mês</p>
+      <button onclick="subscribe('free')">Começar Grátis</button>
+    </div>
+    <div class="plan popular">
+      <h2>Pro</h2>
+      <p>R$ 49/mês</p>
+      <ul>
+        <li>IA Ilimitada</li>
+        <li>Domínio Próprio</li>
+        <li>Suporte Prioritário</li>
+      </ul>
+      <button onclick="subscribe('pro')">Assinar Pro</button>
+    </div>
+  </div>
+  <script>
+    function subscribe(plan) {
+      alert(`Redirecionando para pagamento - Plano ${plan.toUpperCase()}`);
+    }
+  </script>
+</body>
+</html>

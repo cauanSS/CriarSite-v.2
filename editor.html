@@ -1,1 +1,43 @@
- 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor - CriarSite Pro</title>
+  <link rel="stylesheet" href="assets/css/editor.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="toolbar">
+    <div class="logo">CriarSite Pro</div>
+    <button onclick="generateWithAI()" class="ai-btn"><i class="fas fa-magic"></i> Gerar com IA</button>
+    <button onclick="saveSite()">Salvar Site</button>
+    <button onclick="publishSite()">Publicar</button>
+  </div>
+
+  <div class="main-container">
+    <!-- Sidebar de Blocos -->
+    <div class="sidebar">
+      <h3>Blocos</h3>
+      <div class="block" draggable="true" data-type="header">Cabeçalho</div>
+      <div class="block" draggable="true" data-type="hero">Hero Section</div>
+      <div class="block" draggable="true" data-type="features">Funcionalidades</div>
+      <div class="block" draggable="true" data-type="about">Sobre</div>
+      <div class="block" draggable="true" data-type="contact">Contato</div>
+      <div class="block" draggable="true" data-type="footer">Rodapé</div>
+    </div>
+
+    <!-- Canvas do Editor -->
+    <div id="canvas" class="canvas"></div>
+
+    <!-- Painel de Propriedades -->
+    <div class="properties">
+      <h3>Propriedades</h3>
+      <p>Selecione um elemento</p>
+    </div>
+  </div>
+
+  <script src="assets/js/drag-drop.js"></script>
+  <script src="assets/js/ai-generator.js"></script>
+</body>
+</html>
