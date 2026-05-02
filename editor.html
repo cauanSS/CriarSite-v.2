@@ -3,46 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Editor - CriarSite Pro</title>
-  <link rel="stylesheet" href="../assets/css/editor.css">
+  <title>Editor Profissional - CriarSite Pro</title>
+  <link rel="stylesheet" href="assets/css/editor.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <style>
+    .dropped-block {
+      background: white;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      position: relative;
+      min-height: 100px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .dropped-block:hover {
+      box-shadow: 0 15px 40px rgba(99, 102, 241, 0.3);
+      transform: scale(1.02);
+    }
+    .empty-state {
+      text-align: center;
+      margin-top: 15%;
+      color: #64748b;
+      font-size: 1.2rem;
+    }
+  </style>
 </head>
 <body>
+  <!-- Toolbar Superior -->
   <div class="toolbar">
-    <button onclick="history.back()" class="back-btn"><i class="fas fa-arrow-left"></i> Voltar</button>
-    <div class="logo">CriarSite<span>Pro</span></div>
-    <div class="toolbar-actions">
-      <button onclick="generateWithAI()" class="ai-btn"><i class="fas fa-magic"></i> Gerar com IA</button>
-      <button onclick="saveSite()">Salvar</button>
-      <button onclick="publishSite()" class="publish-btn">Publicar</button>
+    <div class="toolbar-left">
+      <button onclick="window.location.href='dashboard.html'" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Voltar
+      </button>
+      <div class="logo">CriarSite<span>Pro</span></div>
+    </div>
+
+    <div class="toolbar-center">
+      <button onclick="undo()" title="Desfazer"><i class="fas fa-undo"></i></button>
+      <button onclick="redo()" title="Refazer"><i class="fas fa-redo"></i></button>
+      <button onclick="generateWithAI()" class="ai-btn">
+        <i class="fas fa-magic"></i> Gerar com IA
+      </button>
+    </div>
+
+    <div class="toolbar-right">
+      <button onclick="saveSite()" class="save-btn">💾 Salvar</button>
+      <button onclick="publishSite()" class="publish-btn">🚀 Publicar Site</button>
     </div>
   </div>
 
   <div class="main-container">
-    <!-- Sidebar Blocos -->
+    <!-- Sidebar de Blocos -->
     <div class="sidebar">
-      <h3>Blocos Essenciais</h3>
-      <div class="block" draggable="true" data-type="header">Cabeçalho</div>
-      <div class="block" draggable="true" data-type="hero">Hero</div>
+      <h3><i class="fas fa-cubes"></i> Blocos</h3>
+      <div class="block" draggable="true" data-type="hero">Hero Section</div>
+      <div class="block" draggable="true" data-type="header">Cabeçalho / Navbar</div>
       <div class="block" draggable="true" data-type="features">Funcionalidades</div>
-      <div class="block" draggable="true" data-type="gallery">Galeria</div>
+      <div class="block" draggable="true" data-type="gallery">Galeria de Imagens</div>
       <div class="block" draggable="true" data-type="testimonials">Depoimentos</div>
-      <div class="block" draggable="true" data-type="contact">Contato</div>
-      <div class="block" draggable="true" data-type="pricing">Preços</div>
+      <div class="block" draggable="true" data-type="pricing">Tabela de Preços</div>
+      <div class="block" draggable="true" data-type="faq">FAQ</div>
+      <div class="block" draggable="true" data-type="cta">Chamada para Ação</div>
+      <div class="block" draggable="true" data-type="contact">Formulário de Contato</div>
       <div class="block" draggable="true" data-type="footer">Rodapé</div>
     </div>
 
-    <!-- Canvas -->
-    <div id="canvas" class="canvas"></div>
+    <!-- Canvas Principal -->
+    <div id="canvas" class="canvas">
+      <div class="empty-state">
+        <h2>Arraste os blocos para cá</h2>
+        <p>Ou use o botão "Gerar com IA" para começar rapidamente</p>
+      </div>
+    </div>
 
-    <!-- Propriedades (Agora Funcional) -->
+    <!-- Painel de Propriedades -->
     <div class="properties-panel">
-      <h3>Propriedades</h3>
-      <div id="properties-content">Selecione um bloco no canvas</div>
+      <h3><i class="fas fa-sliders-h"></i> Propriedades</h3>
+      <div id="properties-content">
+        <p class="empty-prop">Selecione um elemento no canvas para editar</p>
+      </div>
     </div>
   </div>
 
-  <script src="../assets/js/drag-drop.js"></script>
-  <script src="../assets/js/ai-generator.js"></script>
+  <script src="assets/js/drag-drop.js"></script>
+  <script src="assets/js/ai-generator.js"></script>
+  <script src="assets/js/properties.js"></script>
+
+  <script>
+    // Funções globais
+    function saveSite() {
+      alert("✅ Site salvo com sucesso!");
+    }
+
+    function publishSite() {
+      const domain = prompt("Qual nome você quer para o domínio?", "meusite");
+      if (domain) {
+        alert(`🚀 Site publicado com sucesso!\n\nLink: https://${domain}.criarsite.pro`);
+      }
+    }
+
+    function undo() {
+      alert("Desfazer (funcionalidade em desenvolvimento)");
+    }
+
+    function redo() {
+      alert("Refazer (funcionalidade em desenvolvimento)");
+    }
+  </script>
 </body>
 </html>
