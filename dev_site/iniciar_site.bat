@@ -1,0 +1,2 @@
+echo
+npx serve ..
